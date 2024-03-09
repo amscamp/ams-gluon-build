@@ -1,6 +1,6 @@
 # escape=`
 
-FROM debian:11
+FROM debian:12
 ARG GLUONVERSION=v2020.2.x
 ARG SITEVERSION=main
 ARG BUILDNODE=unspecified
