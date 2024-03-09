@@ -1,6 +1,6 @@
 # escape=`
 
-FROM debian:11
+FROM debian:12
 ARG GLUONVERSION=v2020.2.x
 ARG SITEVERSION=main
 ARG BUILDNODE=unspecified
@@ -18,7 +18,7 @@ LABEL com.lacledeslan.build-node=$BUILDNODE `
 
 
 RUN apt-get update && apt-get install -y `
-    git make flex gawk grep libc-dev libz-dev perl python3 rsync subversion unzip build-essential wget python file libncurses-dev &&`
+    git make flex gawk grep libc-dev libz-dev perl python3 rsync subversion unzip build-essential wget file libncurses-dev &&`
     apt-get clean &&`
     rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*;
 
